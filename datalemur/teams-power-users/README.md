@@ -1,19 +1,13 @@
-# Teams Power Users Microsoft SQL Interview Question
-
-## Solution Information
+# Teams Power Users
 
 | Field | Value |
 |---|---|
 | Platform | DataLemur |
 | Difficulty | Easy |
-| Language | PostgreSQL 14 |
 | Company | Microsoft |
 | Category | SQL |
+| Problem | [Teams Power Users](https://datalemur.com/questions/teams-power-users) |
 
-## Problem
+## Solutions
 
-[View Teams Power Users Microsoft SQL Interview Question on DataLemur](https://datalemur.com/questions/teams-power-users)
-
-## Solution
-
-See the solution file in this directory.
+- [SQL](./solution.sql)
