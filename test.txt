@@ -1,3 +1,0 @@
-Coding Solutions Sync is working!
-
-Created from Chrome Extension.
