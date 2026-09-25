@@ -4,7 +4,7 @@ class Solution:
         pointer2 = 0
         result = ""
 
-        for i in range(max(len(word1), len(word2))):
+        for i in range(0, len(word1) + len(word2)):
             if pointer1 < len(word1):
                 result += word1[pointer1]
                 pointer1 += 1
