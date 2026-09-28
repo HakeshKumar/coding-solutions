@@ -7,6 +7,6 @@ with count_votes  as (
 )
 
 select c.name as name
- from Candidate c left Join count_votes v ON c.id=v.candidateid
+ from Candidate c  Join count_votes v ON c.id=v.candidateid
  order by v.vote_count desc
  limit 1
