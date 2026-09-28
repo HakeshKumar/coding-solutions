@@ -1,9 +1,16 @@
+with ordered_table as (
 
-select min(a.difference) as shortest from (
-SELECT
-    p.x AS first,
-    new_p.x AS second_val,
-    abs(p.x - new_p.x) AS difference
-FROM point p
-LEFT JOIN point AS new_p
-    ON p.x <> new_p.x ) a
+    select * from point order by x asc
+),
+
+dist as (
+
+    select o.x as first_item, lead(o.x) OVER() as  next_item from ordered_table o
+),
+
+differ as (
+
+    select abs(first_item-next_item) as difference from dist
+)
+
+select min(difference)  as shortest  from differ 
