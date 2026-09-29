@@ -7,6 +7,7 @@ class Solution:
                 result[i]=1
             else:
                 result[i]+=1
+
             
 
         for j in result.values():
