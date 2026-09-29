@@ -7,11 +7,7 @@ class Solution:
                 result[i]=1
             else:
                 result[i]+=1
-
-            
-
-        for j in result.values():
-
-            if j>1:
-                return True
+                if result[i]>1:
+                    return True
+                    
         return False
