@@ -12,7 +12,6 @@ class Solution:
 
         for i,j in group.items():
             list_new[j].append(i)
-        print(list_new)
 
         for i in range(len(list_new) - 1, -1, -1):
             for num in list_new[i]:
