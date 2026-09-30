@@ -1,24 +1,18 @@
 class Solution:
     def isAnagram(self, s: str, t: str) -> bool:
-        if len(s)!=len(t):
+        if len(s) != len(t):
             return False
 
-        res={}
+        freq = [0] * 26
 
-        for i in s.strip():
-            if i not in res:
-                res[i]=1
-            else:
-                res[i]+=1
-        
-        for j in t.strip():
-            if j not in res:
-                res[j]=1
-            else:
-                res[j]-=1
-        
-        for i in res.values():
-            if i>0:
+        for ch in s:
+            freq[ord(ch) - ord('a')] += 1
+
+        for ch in t:
+            freq[ord(ch) - ord('a')] -= 1
+
+        for count in freq:
+            if count != 0:
                 return False
-        
+
         return True
