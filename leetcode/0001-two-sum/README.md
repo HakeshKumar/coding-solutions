@@ -1,18 +1,13 @@
 # 1. Two Sum
 
-## Solution Information
-
 | Field | Value |
 |---|---|
 | Platform | LeetCode |
 | Difficulty | Easy |
-| Language | Python 3 |
+| Category | Python |
 | Topics | Array, Hash Table |
+| Problem | [Two Sum](https://leetcode.com/problems/two-sum/) |
 
-## Problem
+## Solutions
 
-[View Two Sum on LeetCode](https://leetcode.com/problems/two-sum/)
-
-## Solution
-
-See the solution file in this directory.
+- [Python](./solution.py)
