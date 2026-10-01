@@ -1,24 +1,8 @@
-WITH RECURSIVE hierarchy AS (
-
-    -- Start from the head of the company
-    SELECT
-        employee_id,
-        manager_id
-    FROM Employees
-    WHERE employee_id = 1
-
-    UNION ALL
-
-    -- Find employees reporting to the previous level
-    SELECT
-        e.employee_id,
-        e.manager_id
-    FROM Employees e
-    JOIN hierarchy h
-        ON e.manager_id = h.employee_id
-    WHERE e.employee_id <> 1
-)
-
-SELECT employee_id
-FROM hierarchy
-WHERE employee_id <> 1;
+SELECT e1.employee_id
+FROM Employees e1,
+     Employees e2,
+     Employees e3
+WHERE e1.manager_id = e2.employee_id
+  AND e2.manager_id = e3.employee_id
+  AND e3.manager_id = 1 
+  AND e1.employee_id != 1
