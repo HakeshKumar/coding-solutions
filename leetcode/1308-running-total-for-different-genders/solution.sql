@@ -7,5 +7,4 @@ order by gender, day)
 select gender, day, SUM(total_current) OVER (
  PARTITION BY gender 
  ORDER BY gender, day
- ROWS BETWEEN UNBOUNDED PRECEDING AND CURRENT ROW
 ) as total  from cte
