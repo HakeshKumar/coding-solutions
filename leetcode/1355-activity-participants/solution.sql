@@ -1,8 +1,10 @@
 # Write your MySQL query statement below
 with maximum_activities as 
 (
-    select activity , row_number() over(partition by activity) as rn
+    select activity , count(*) as rn
     from Friends
+    group by activity
+
     order by rn desc
 ),
  minimum_activity as 
