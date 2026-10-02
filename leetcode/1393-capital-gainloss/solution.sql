@@ -11,7 +11,7 @@ sell_orders as (
     from stocks where operation='Sell'
     group by stock_name
 )
-select b.stock_name, sum(s.sell_price-b.buy_price)   as capital_gain_loss
+select b.stock_name, s.sell_price-b.buy_price   as capital_gain_loss
 from buy_orders b join sell_orders s on
 b.stock_name=s.stock_name
 group by b.stock_name
