@@ -1,13 +1,19 @@
-# Write your MySQL query statement below
-with activity as 
-(
-    select activity , count(*) as rn
-    from Friends
-    group by activity
+WITH activity AS (
+    SELECT activity, COUNT(*) AS rn
+    FROM Friends
+    GROUP BY activity
 )
-select distinct f.activity 
 
-from Friends f join activities a on f.activity =a.name 
-where a.name NOT IN (     select activity from activity where rn = ( select max(rn) from activity)
-    UNION ALL 
-    select activity from activity where rn = ( select min(rn) from activity))
+SELECT activity
+FROM activity
+WHERE activity NOT IN (
+    SELECT activity
+    FROM activity
+    WHERE rn = (SELECT MAX(rn) FROM activity)
+
+    UNION ALL
+
+    SELECT activity
+    FROM activity
+    WHERE rn = (SELECT MIN(rn) FROM activity)
+);
