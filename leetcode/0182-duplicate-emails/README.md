@@ -1,18 +1,13 @@
 # 182. Duplicate Emails
 
-## Solution Information
-
 | Field | Value |
 |---|---|
 | Platform | LeetCode |
 | Difficulty | Easy |
-| Language | MySQL |
+| Category | SQL |
 | Topics | Database |
+| Problem | [Duplicate Emails](https://leetcode.com/problems/duplicate-emails/) |
 
-## Problem
+## Solutions
 
-[View Duplicate Emails on LeetCode](https://leetcode.com/problems/duplicate-emails/)
-
-## Solution
-
-See the solution file in this directory.
+- [SQL](./solution.sql)
